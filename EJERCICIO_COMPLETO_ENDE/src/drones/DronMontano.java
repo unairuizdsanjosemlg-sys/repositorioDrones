@@ -5,8 +5,8 @@ public class DronMontano extends Dron{
 	private int altitude;
 	
 	// Constructor parametrizado de la clase DronMontano que hereda de la clase Dron.
-	public DronMontano(String id, int maxAutonomy, int maxSpeed, String status, int altitude) {
-		super(id, maxAutonomy, maxSpeed, status);
+	public DronMontano(String id, int maxAutonomy, int maxSpeed, boolean operative, int altitude) {
+		super(id, maxAutonomy, maxSpeed, operative);
 		this.altitude = altitude;
 	}
 

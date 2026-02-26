@@ -5,15 +5,15 @@ abstract class Dron {
 	private String id;
 	private int maxAutonomy;
 	private int maxSpeed;
-	private String status;
+	private boolean operative;
 	
 	// Constructor parametrizado de la clase Dron.
-	public Dron(String id, int maxAutonomy, int maxSpeed, String status) {
+	public Dron(String id, int maxAutonomy, int maxSpeed, boolean operative) {
 		super();
 		this.id = id;
 		this.maxAutonomy = maxAutonomy;
 		this.maxSpeed = maxSpeed;
-		this.status = status;
+		this.operative = operative;
 	}
 	
 	// GETTERS y SETTERS
@@ -35,12 +35,15 @@ abstract class Dron {
 	public void setMaxSpeed(int maxSpeed) {
 		this.maxSpeed = maxSpeed;
 	}
-	public String getStatus() {
-		return status;
+
+	public boolean isOperative() {
+		return operative;
 	}
-	public void setStatus(String status) {
-		this.status = status;
+
+	public void setOperative(boolean operative) {
+		this.operative = operative;
 	}
+	
 	
 	
 }

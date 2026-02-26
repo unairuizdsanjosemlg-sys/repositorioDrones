@@ -5,8 +5,8 @@ public class DronMaritimo extends Dron{
 	private int salinityResistance;
 	
 	// Constructor parametrizado de la clase DronMaritimo que hereda de la clase Dron.
-	public DronMaritimo(String id, int maxAutonomy, int maxSpeed, String status, int salinityResistance) {
-		super(id, maxAutonomy, maxSpeed, status);
+	public DronMaritimo(String id, int maxAutonomy, int maxSpeed, boolean operative, int salinityResistance) {
+		super(id, maxAutonomy, maxSpeed, operative);
 		this.salinityResistance = salinityResistance;
 	}
 
