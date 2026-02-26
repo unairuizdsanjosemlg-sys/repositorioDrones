@@ -43,7 +43,4 @@ abstract class Dron {
 	public void setOperative(boolean operative) {
 		this.operative = operative;
 	}
-	
-	
-	
 }

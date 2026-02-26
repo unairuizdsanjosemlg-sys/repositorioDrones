@@ -18,4 +18,25 @@ public class DronMaritimo extends Dron{
 	public void setSalinityResistance(int salinityResistance) {
 		this.salinityResistance = salinityResistance;
 	}
+	
+	// Método para calcular el tiempo de respuesta del dron maritimo;
+	public int calcularTiempoRespuesta(int distancia, int salinityResistance) {
+		int tRespuesta = 0;
+		if(distancia < 0) {
+			throw new IllegalArgumentException("La distancia no puede ser negativa.");
+		} else {
+			if(isOperative() == false) {
+				throw new ArithmeticException("El dron no está operativo.");
+			} else {
+				tRespuesta = distancia / getMaxSpeed();
+				if(salinityResistance < 30) {
+					tRespuesta += (tRespuesta*20)/100;
+					if(tRespuesta > getMaxAutonomy()) {
+						throw new ArithmeticException("El tiempo de respuesta es mayor a la autonomia del dron.");
+					}
+				}
+			}
+		}
+		return tRespuesta;
+	}
 }
