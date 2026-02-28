@@ -2,20 +2,20 @@ package drones;
 
 public class DronMontano extends Dron{
 	// Variable especifica de la especializacion DronMontano.
-	private int altitude;
+	private double altitude;
 	
 	// Constructor parametrizado de la clase DronMontano que hereda de la clase Dron.
-	public DronMontano(String id, int maxAutonomy, int maxSpeed, boolean operative, int altitude) {
+	public DronMontano(String id, int maxAutonomy, int maxSpeed, boolean operative, double altitude) {
 		super(id, maxAutonomy, maxSpeed, operative);
 		this.altitude = altitude;
 	}
 
 	// GETTERS y SETTERS
-	public int getAltitude() {
+	public double getAltitude() {
 		return altitude;
 	}
 
-	public void setAltitude(int altitude) {
+	public void setAltitude(double altitude) {
 		this.altitude = altitude;
 	}
 	
